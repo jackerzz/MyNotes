@@ -1,0 +1,53 @@
+虚拟环境：   https://blog.csdn.net/tyt_XiaoTao/article/details/80314528
+models:     https://www.cnblogs.com/wupeiqi/articles/6216618.html
+REStAPI:    https://www.cnblogs.com/wupeiqi/articles/4556300.html#4254147
+            https://simpleisbetterthancomplex.com/tutorial/2016/10/24/how-to-add-social-login-to-django.html
+
+
+
+
+
+第三方登录授权：
+    http://yshblog.com/blog/70
+原生 https://blog.csdn.net/zjw_python/article/details/79163912
+    https://github.com/HaddyYang/django2.0-course、
+
+
+ffpeg安装：
+    https://blog.csdn.net/chuanglan/article/details/80534196
+
+
+
+
+        MEDIA:指用户上传的文件，比如在Model里面的FileFIeld，ImageField上传的文件。如果你定义
+
+        MEDIA_ROOT=c:\temp\media，那么File=models.FileField(upload_to="abc/")＃，上传的文件就会被保存到c:\temp\media\abc
+
+        eg：
+            class blog(models.Model):
+                   Title=models.charField(max_length=64)
+                   Photo=models.ImageField(upload_to="photo")
+          上传的图片就上传到c:\temp\media\photo，而在模板中要显示该文件，则在这样写
+          在settings里面设置的MEDIA_ROOT必须是本地路径的绝对路径，一般是这样写:
+                 BASE_DIR= os.path.abspath(os.path.dirname(__file__))
+                 MEDIA_ROOT=os.path.join(BASE_DIR,'media/').replace('\\','/')
+
+        MEDIA_URL是指从浏览器访问时的地址前缀，举个例子：
+            MEDIA_ROOT=c:\temp\media\photo
+            MEDIA_URL="/data/"
+        在开发阶段,media的处理由django处理：
+
+           访问http://localhost/data/abc/a.png就是访问c:\temp\media\photo\abc\a.png
+
+           在模板里面这样写<img src="/media/abc/a.png">
+
+           在部署阶段最大的不同在于你必须让web服务器来处理media文件，因此你必须在web服务器中配置，
+           以便能让web服务器能访问media文件
+           以nginx为例，可以在nginx.conf里面这样：
+
+                 location ~/media/{
+                       root/temp/
+                       break;
+                    }
+
+           具体可以参考如何在nginx部署django的资料。

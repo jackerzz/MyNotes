@@ -1,0 +1,19 @@
+<!--用户个人信息-->
+{% extends 'base/base.html' %}
+{% block title %} 注册 {% endblock %}
+
+{% block content %}
+   <div class="container">
+        <div class="col-md-4 col-md-offset-4">
+            {% csrf_token %}
+
+            <h2 class="text-center">个人信息</h2>
+            {{ form.Username.label_tag }}
+            {{ form.Username}}
+            {{ form.Email.label_tag }}
+            {{ form.Email}}
+            {{ form.Sex.label_tag }}
+            {{ form.Sex}}
+        </div>
+    </div>
+{% endblock %}

@@ -1,0 +1,23 @@
+#创建
+    django-admin.py startproject mysite
+#创建应用
+    python manage.py startapp blog
+    --注意：创建下一个项目的时候需要关闭服务
+#启动项目
+    python manage.py runserver 8080
+#同步更改数据库
+    python manage.py syncdb
+    注意：Django 1.7.1 及以上的版本需要用以下命令
+    python manage.py makemigrations
+    python manage.py migrate
+        注：https://www.jianshu.com/p/52bdb7e1a17c
+#清空数据库
+    python manage.py flush
+#超级管理员
+
+    python manage.py createsuperuser
+
+    # 按照提示输入用户名和对应的密码就好了邮箱可以留空，用户名和密码必填
+
+    # 修改 用户密码可以用：
+    python manage.py changepassword username

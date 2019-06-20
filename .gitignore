@@ -1,0 +1,14 @@
+*.pyc
+venv/
+src/
+var/celery.log
+var/development-error.log
+storage/
+.cache/
+build/
+tmp/
+var/
+node_modules/
+ossutil_output/
+.idea/
+.vscode/
