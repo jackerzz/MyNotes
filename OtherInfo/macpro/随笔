@@ -1,0 +1,28 @@
+
+ 导入数据：
+ 	./bin/psql_db restore ~/vs_db_backup-2019.03.12-01.13.30.sql 
+进入客户端：
+ 	sudo -u postgres psql
+ 重启客户端：
+  	sudo /etc/init.d/postgresql restart
+ 修改配置：
+	 sudo vi /etc/postgresql/10/main/postgresql.conf 
+	 sudo vi /etc/postgresql/10/main/pg_hba.conf 
+ 
+
+
+启动服务端：
+	./bin/manage runserver
+	./bin/celeryctl start
+	url(r'^api-sileo/', include('sileo.urls', namespace='sileo')),
+
+端口查看：
+	netstat -a  	已经连接的服务端口
+	netstat -ap	  	所有的服务端口
+	netstat -ap | grep 8080   查看指定端口，可以结合grep命令
+	lsof -i:8888  	使用lsof命令
+	kill -9 PID号 	杀死进程
+
+#
+url——>视图 列表
+./bin/manage listurls

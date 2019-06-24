@@ -1,0 +1,35 @@
+
+api gateway
+https://www.baidu.com/baidu?isource=infinity&iname=baidu&itype=web&tn=02003390_42_hao_pg&ie=utf-8&wd=api%20gateway
+    限流
+    	滑动窗口
+    	qbs
+    consul
+    agent
+
+    多级缓存(多种策略)
+    	local
+    	l1	
+    	l2
+    	将特定的对象放到cache中
+	    GW
+	    	-cache
+	    app
+	    	-cache
+	    server
+	    	-cache1
+	    	-cache2
+	       -db
+	熔断：
+
+	总结：
+		通用基础库
+		工具 gw
+		generate + framework
+		pprof + trace + go-torch
+
+		优化热点代码
+		较少反射
+		合理复用对象
+		gc开销
+		json/序列化or反序列化

@@ -1,0 +1,11 @@
+提交事项：
+
+	1。代码仓库使用.gitignore可以忽略不需要的文件，例如.idea文件夹
+	2。添加requirements.txt文件，把项目的依赖包列出来，方便其他人跑你的项目
+	pip freeze > requirements.txt
+	pip install -r requirements.txt
+	3。模型里面的字段不要大小写混用，用小写
+	4。Django的模型的ID默认自动生成，没必要新建ID字段
+	5。判断是否删除用BooleanField的真或假就可以了，没有
+	要用选择6.推前删除代码里面的打印方法，保证代码的干净
+	7。多处英语单词拼写错误，注意检查

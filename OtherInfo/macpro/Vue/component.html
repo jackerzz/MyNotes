@@ -1,0 +1,105 @@
+Vue
+	基本指令
+		https://www.cnblogs.com/ctztake/p/8352824.html
+	组件注册
+		Vue.component()
+		全局组件
+		局部组件
+		组件中的data必须是函数
+
+	组件属性
+		props:
+			Vue组件通过props属性来声明一个自己的属性，然后父组件就可以往里面传递数据
+			eg:
+				Vue.component('mycomponent',{
+				    template: '<div>这是一个自定义组件,父组件传给我的内容是：{{myMessage}}</div>',
+				    props: ['myMessage'],
+				    data () {
+				      return {
+				        message: 'hello world'
+				      }
+				    }
+				  })
+				#使用组件
+				<div id="app">
+				    <mycomponent my-message="hello"></mycomponent>
+				</div>
+		动态绑定特征性值：
+				<template>
+				  <div id="app1">
+				  <div>{{parentArray}}</div>
+				  <my-component :child-array="parentArray"></my-component>
+				  </div>
+				</template>
+				<script>
+					Vue.component("my-component",{
+						template: `<div>这是接收了父组件传递值的子组件的childArray: {{childArray}} <br>
+	     						   <button type="button" @click="changeArray">点击我改变父元素的parentArray</button>
+	     						   </div>`,
+	     				props:['childArray'],
+	     				data(){
+	     					return{
+	     						counter:1
+	     					}
+	     				},
+	     				methods:{
+		     				changeArray(){
+		     					this.childArray.push(this.counter++)
+		     				}
+	     				}
+					})
+					new Vue({
+						el:'#app1',
+						data:{
+						parentArray:[]
+					}
+					})		
+				</script>
+				<style>
+				</style>
+	组件事件
+		自定义事件：
+			通过prop属性，父组件可以向子组件传递数据，而子组件的自定义事件就是用来将内部的数据报告给父组件的。
+			eg:
+				<div id="app2">
+					<my-component2 v-on:myclick="onClick"></my-component2>
+				</div>
+				<script>
+					Vue.component('my-component2',{
+						template:`<div>
+									<button type="button" @click="childClick">点击我触发自定义事件</button>
+						          </div>`,
+						methods:{
+							childClick(){
+								this.$emit('myclick','这是我暴露出去的数据','这是我暴露出去的数据2')
+							}
+						}
+					})
+					new Vue({
+						el:'#app2',
+						// https://cn.vuejs.org/v2/api/#%E9%80%89%E9%A1%B9-%E6%95%B0%E6%8D%AE
+						methods:{
+							onClick(){
+								console.log(arguments)
+							}
+						}
+					})
+				</script>
+				注意： 在使用v-on绑定事件处理方法时，不应该传进任何参数，而是直接写v-on:myclick="onClick",不然，子组件暴露出来的数据就无法获取到了
+	动态组件
+	组件插槽分发内容
+	mixin
+	路由
+	bus总线
+	$emit
+
+--------------------------------------------------------------------------------------------
+Vuex
+	base
+		1、Vuex 的状态存储是响应式的
+		2、不能直接改变 store 中的状态、改变 store 中的状态的唯一途径就是显式地提交 (commit) mutation
+	State 
+	Getter
+	Mutation
+	Action
+	Module

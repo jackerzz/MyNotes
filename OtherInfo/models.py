@@ -22,3 +22,7 @@ m-to-m
 pk代表主键(primary key)，pk更加独立于实际的主键字段，即您不必关心主键字段是否被称为id或object_id或任何。
 
 staticmethod:https://www.runoob.com/python/python-func-staticmethod.html
+
+ signals (触发时启动)
+ 		对于Django内置的信号,仅需注册指定信号,当程序执行相应操作时,系统会自动触发注册函数
+ 			https://www.cnblogs.com/haiyan123/p/8259647.html

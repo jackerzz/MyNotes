@@ -1,6 +1,15 @@
 BigBoos：
 	https://legacy.gitbook.com/@wizardforcel
 	https://www.cnblogs.com/ctztake/p/8428387.html
+
+
+002：
+	@cache_locking(lock_id,val)
+		 lock_id  - 要使用的缓存ID
+         val  - 给定缓存的值
+	
+---------------------------------------------------------------------------------------------
+---------------------------------------------------------------------------------------------
 001
 PanelPageMixin()  ---请求入口数据检测：仅ajax数据request可以通过
 TemplateView()    ---基于类的通用模板视图的升级， 这个一个包括上面的JS变量和一个用于存储它的上下文。

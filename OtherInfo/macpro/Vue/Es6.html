@@ -1,0 +1,48 @@
+http://es6.ruanyifeng.com/#docs/let
+https://www.cnblogs.com/moqiutao/p/7886277.html
+vue:
+	https://www.cnblogs.com/moqiutao/category/923230.html
+const:定义一个常量
+let:定义块级作用域变量
+	let && var 区别
+	let 先声明后使用，不存在变量提升
+	let 不能重复定义,但是可以修改
+	var 既可以先声明后使用，也可以先使用后声明，这样不会报错，会打印undified,而let必须是先声明后使用，如果没有声明就会报错
+变量的解构赋值：
+	let[a,b,c]=[121,232,343] 注：左右的定义格式保持一致
+模板字符串（template string）
+	是增强版的字符串，用反引号（`）标识。它可以当作普通字符串使用，也可以用来定义多行字符串，或者在字符串中嵌入变量。	
+可以给函数设置默认参数:
+
+ES6的箭头语法:
+	单行
+		eg：
+			var foo = (arg1,arg2) => arg1 + arg2
+			//等价于
+			var foo = function (arg1, arg2) { return arg1 + arg2; };
+	多行
+		eg:
+		var foo = (arg1,arg2) => {
+		return arg1  + arg2;
+		}
+		//以上表达式相当于
+		var foo = function (arg1, arg2) {
+		    return arg1 + arg2;
+		};
+	无参
+		eg:
+		 var foo = () => {}
+ 
+		 //以上表达式相当于
+		 var foo = function () {}
+
+	一个参数
+		eg：
+			var foo = arg => {
+			  return arg*arg;    
+			}
+
+			//以上表达式相当于
+			var foo = function (arg) {
+			   return arg*arg;  
+			}
