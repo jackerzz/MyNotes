@@ -32,3 +32,17 @@
 	2. `methods`方法表示一个具体的操作，主要书写业务逻辑；
 	
 	3. `watch`一个对象，键是需要观察的表达式，值是对应回调函数。主要用来监听某些特定数据的变化，从而进行某些具体的业务逻辑操作；可以看作是`computed`和`methods`的结合体；
+	
+	涂图TUSDK http://tutucloud.com/products/video-sdk
+
+	Camera360 https://sdk.camera360.com/ 
+
+	旷视Face++ https://www.faceplusplus.com.cn
+
+	美摄 https://www.meishesdk.com/doc
+
+	相芯 www.faceunity.com/ 
+
+	锐动天地 http://www.rdsdk.com/
+
+	七牛 https://developer.qiniu.com/pili/sdk/3733/short-video-ios-sdk
