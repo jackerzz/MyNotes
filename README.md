@@ -18,6 +18,7 @@
 > [Api](https://github.com/jackerzz/projectdjango/tree/master/ProjectDjango/myviode/viodes/api)
     >> Rest_framework
 
+##[爬虫导读](https://legacy.gitbook.com/@germey)
 ##[笔记](https://github.com/jackerzz/projectdjango/tree/master/ProjectDjango/%E7%AC%94%E8%AE%B0)
 ***
     pip freeze > requirements.txt

@@ -177,3 +177,40 @@ class FooResource(Resource):
     query_set = Foo.objects.all()
     allowed_methods = ['filter']
     method_perms = (login_required,)
+
+
+--------------------------------------------
+--------------------------------------------
+def owner_required(resource, method, obj, *args, **kwargs):
+	-->src/channelfix/sileo/permissions.py
+	权限方法，如果对象属于当前登录的用户，则返回True。
+
+    参数：
+         resource  - 调用此方法的Resource实例
+         obj  - 您要操作的对象
+         method  - 表示正在尝试的操作的字符串执行。 选项包括filter，get_pk，create，update，并删除
+eg:
+	Api:
+		object_perms=(owner_required,)
+
+def login_age_required(resource, *args, **kwargs):
+	-->src/channelfix/channelfix/site/api_sileo/permissions.py
+	权限函数，如果用户的年龄大于或等于13岁则通过身份验证，则返回True
+eg:
+	method_perms = (login_age_required,)
+
+
+-->src/channelfix/sileo/resource.py
+def get_form(self, *args, **kwargs):
+	使用的form_class属性
+		return表单实例
+         resource以及提供的参数和关键字参数
+        参数
+			form_class
+			如果resource==None，则此方法将引发ValueError
+         
+def get_form_class(self, *args, **kwargs):
+	
+	return 用于create和update方法的表单类
+def validate_form(self, form):
+	return 如果给定的表单有效，则返回true，否则返回False。

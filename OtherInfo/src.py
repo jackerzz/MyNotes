@@ -14,6 +14,7 @@ src/channelfix
 		 sass/				--https://www.sass.hk/
 		 setup.py
 		 sileo/
+		 	is_ratelimited()  -->速度有限
 		 tournament/ 					比赛
 		 	 base_tournament/			基础
 			 challenge_tournament/		挑战
@@ -27,6 +28,7 @@ src/channelfix
 	     		 admin.py
 				 api/
 				 api_sileo/
+
 				 apps.py
 				 auth/
 				 finders/
@@ -36,6 +38,7 @@ src/channelfix
 				 middleware/
 				 migrations/
 				 models/
+				 	PositiveIntegerField-->https://blog.csdn.net/devil_2009/article/details/41735611
 				 mustachetemplates/
 				 preprocessors/
 				 signals/
@@ -43,6 +46,11 @@ src/channelfix
 				 		--providing_args
              					此信号可以在send（）调用中传递的参数列表。
 				 static/
+				 	site/
+				 	  vue/
+				 	  	store/
+				 	  	js-->instanceof用于判断一个变量是否某个对象的实例
+				 	  	vuex-->https://vuex.vuejs.org/zh/guide/getters.html
 				 tasks/
 				 templates/
 				 templatetags/

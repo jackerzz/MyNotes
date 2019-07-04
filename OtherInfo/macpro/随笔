@@ -14,8 +14,7 @@
 启动服务端：
 	./bin/manage runserver
 	./bin/celeryctl start
-	url(r'^api-sileo/', include('sileo.urls', namespace='sileo')),
-
+	
 端口查看：
 	netstat -a  	已经连接的服务端口
 	netstat -ap	  	所有的服务端口
@@ -26,3 +25,8 @@
 #
 url——>视图 列表
 ./bin/manage listurls
+
+https://opensource.com/article/17/6/ffmpeg-convert-media-file-formats
+https://realpython.com/asynchronous-tasks-with-django-and-celery/
+https://blog.csdn.net/zaishijizhidian/article/details/81778685
+http://devops.astrotech.io/
