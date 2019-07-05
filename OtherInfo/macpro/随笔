@@ -9,7 +9,7 @@
 	 sudo vi /etc/postgresql/10/main/postgresql.conf 
 	 sudo vi /etc/postgresql/10/main/pg_hba.conf 
  
-
+ 
 
 启动服务端：
 	./bin/manage runserver
@@ -30,3 +30,15 @@ https://opensource.com/article/17/6/ffmpeg-convert-media-file-formats
 https://realpython.com/asynchronous-tasks-with-django-and-celery/
 https://blog.csdn.net/zaishijizhidian/article/details/81778685
 http://devops.astrotech.io/
+http://www.ansible.com.cn/
+
+stapes.js
+	https://www.zhihu.com/question/28887493
+
+mustache语法
+	https://www.cnblogs.com/DF-fzh/p/5979093.html
+
+src/channelfix/channelfix/site/static/site/js/modules/page-manager.js
+src/channelfix/channelfix/site/static/site/js/skeleton.js
+publish:
+	https://www.shenyujie.cc/2018/12/25/PubSub/
