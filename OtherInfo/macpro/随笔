@@ -36,9 +36,15 @@ stapes.js
 	https://www.zhihu.com/question/28887493
 
 mustache语法
-	https://www.cnblogs.com/DF-fzh/p/5979093.html
+	https://www.cnblogs.com/lyzg/p/5133250.html
+zeptojs——api文档：
+	https://www.html.cn//doc//zeptojs_api//
 
 src/channelfix/channelfix/site/static/site/js/modules/page-manager.js
 src/channelfix/channelfix/site/static/site/js/skeleton.js
 publish:
 	https://www.shenyujie.cc/2018/12/25/PubSub/
+zepto
+	src/channelfix/channelfix/site/static/site/js/skeleton.js
+window.location.pathname:
+	https://www.cnblogs.com/chaoyuehedy/p/5708165.html

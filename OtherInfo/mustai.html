@@ -1,0 +1,50 @@
+<script id="tpl2" type="text/html">
+    -{{#prop}}content{{/prop}}-
+</script>
+<script>
+    var tpl2 = document.getElementById('tpl2').innerHTML.trim();
+    Mustache.parse(tpl2);
+    //测试falsy值
+    console.log(Mustache.render(tpl2, {prop: ''}));//--
+    console.log(Mustache.render(tpl2, {prop: 0}));//--
+    console.log(Mustache.render(tpl2, {prop: null}));//--
+    console.log(Mustache.render(tpl2, {prop: undefined}));//--
+    console.log(Mustache.render(tpl2, {prop: false}));//--
+    console.log(Mustache.render(tpl2, {prop: NaN}));//--
+    //测试空数组
+    console.log(Mustache.render(tpl2, {prop: []}));//--
+    //测试不存在的属性
+    console.log(Mustache.render(tpl2, {prop2: 
+true
+}));//--
+    //测试function
+    console.log(Mustache.render(tpl2, {
+        prop: function () {
+        }
+    }));//--
+    console.log(Mustache.render(tpl2, {
+        prop: function () {
+            return false;
+        }
+    }));//--
+    console.log(Mustache.render(tpl2, {
+        prop: function() {
+            return [];
+        }
+    }));//--
+    
+    //测试简单对象
+    console.log(Mustache.render(tpl2, {prop: {name: 'jason'}}));//-content-
+   //测试日期对象
+    console.log(Mustache.render(tpl2, {prop: new Date()}));//-content-
+    //测试boolean number string
+    console.log(Mustache.render(tpl2, {prop: true}));//-content-
+    console.log(Mustache.render(tpl2, {prop: 1.2}));//-content-
+    console.log(Mustache.render(tpl2, {prop: 'yes'}));//-content-
+    //测试返回非falsy，非空数组的function
+    console.log(Mustache.render(tpl2, {
+        prop: function () {
+            return 'it\'s a fun'
+        }
+    }));//-content-
+</script>
