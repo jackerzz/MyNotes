@@ -15,8 +15,8 @@ vscode:
 			 		git config --global user.email ""
 
 			 	git log 
-			 		-->	commit "name"
-			 	git reset commit "name"
+			 		-->	commit "提交id串"
+			 	git reset commit "提交id串"
 		 		git push -f origin 927-enhacement/influencer-page-display   注：覆盖远程上一次提交的内容
 Chrome: 
 	合并代码：

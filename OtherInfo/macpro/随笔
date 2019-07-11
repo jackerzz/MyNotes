@@ -35,7 +35,7 @@ http://www.ansible.com.cn/
 stapes.js
 	https://www.zhihu.com/question/28887493
 
-mustache语法s
+mustache语法
 	https://www.cnblogs.com/lyzg/p/5133250.html
 zeptojs——api文档：
 	https://www.html.cn//doc//zeptojs_api//
@@ -48,8 +48,13 @@ zepto
 	src/channelfix/channelfix/site/static/site/js/skeleton.js
 window.location.pathname:
 	https://www.cnblogs.com/chaoyuehedy/p/5708165.html
+	页面跳转：
+	https://www.cnblogs.com/lmg-jie/p/7880231.html
 mixins.py
 	https://www.cnblogs.com/liujiacai/p/10241478.html
 
 ffmpeg:
 	https://ffmpeg.org/download.html
+
+AMD规范：
+	https://blog.csdn.net/qq_16633405/article/details/77961539
