@@ -58,3 +58,9 @@ ffmpeg:
 
 AMD规范：
 	https://blog.csdn.net/qq_16633405/article/details/77961539
+浏览器刷新：
+	强刷：Ctrl + F5 （调试推荐）
+	弱刷：F5
+唯一锁定：
+	js-xx-xx + （ctrl+F）===> main页面
+	
