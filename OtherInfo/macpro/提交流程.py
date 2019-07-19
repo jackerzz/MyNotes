@@ -1,5 +1,7 @@
 vscode:
 	拉取主分支：git pull origin develop  		注:提交后注意看是否与主库冲突
+	切换分支：git checkout 分支name
+	删除本地分支：git branch -d 分支name
 	创建分支src/channelfix: git  branch 927-enhacement/influencer-page-display
 	编码
 	提交：git add .
@@ -31,8 +33,10 @@ Chrome:
 	申请审查:
 		https://mm.channelfix.com/tchannelfix/channels/code-review
 			格式：
-				@here if you have time, please review my changes for influencer page in review url, thanks
-				（channelfix mr）[https://forge.channelfix.com/channelfix/channelfix/merge_requests/2846/diffs]
-		        （jira issue）[https://bposeats.atlassian.net/browse/VIDS-927]	
+				@here if you have time, please review my changes for influencer page in review VIDEO_LIVE=undefined,thanks 
+				[channelfixmr](https://forge.channelfix.com/channelfix/channelfix/merge_requests/2891/diffs),
+				[jiraissue](https://bposeats.atlassian.net/browse/VIDS-927)
 git--help:
 	https://www.cnblogs.com/haiyan123/p/7994318.html
+	https://github.com/dunwu/blog/blob/master/source/_posts/tools/git.md
+	https://github.com/dunwu/blog

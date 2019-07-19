@@ -22,7 +22,12 @@
 	lsof -i:8888  	使用lsof命令
 	kill -9 PID号 	杀死进程
 
-#
+#---------------------------------------------------------------------------------
+WIP   Work In Progress 开发中
+LGTM Looks Good To Me Riview 完别人的 PR ，没有问题
+PTAL Please Take A Look 帮我看下，一般都是请别人 review 自己的 PR
+CC 是好像是通知别人的意思，不知道是什么的缩写
+#---------------------------------------------------------------------------------
 url——>视图 列表
 ./bin/manage listurls
 
@@ -39,9 +44,17 @@ mustache语法
 	https://www.cnblogs.com/lyzg/p/5133250.html
 zeptojs——api文档：
 	https://www.html.cn//doc//zeptojs_api//
+mitmproxy:
+	证书安装：
+		http://mitm.it/
+		chrome配置证书：
+			到这个地址添加下载的证书：
+				chrome://settings/certificates
 
-src/channelfix/channelfix/site/static/site/js/modules/page-manager.js
-src/channelfix/channelfix/site/static/site/js/skeleton.js
+	安装
+		pip3 install mitmproxy
+
+
 publish:
 	https://www.shenyujie.cc/2018/12/25/PubSub/
 zepto
@@ -63,4 +76,13 @@ AMD规范：
 	弱刷：F5
 唯一锁定：
 	js-xx-xx + （ctrl+F）===> main页面
-	
+ubuntu 安装pip的问题
+	https://blog.csdn.net/kingyuan666/article/details/81346379
+
+django性能优化：
+	https://www.cnblogs.com/zero-white/p/8733590.html
+	https://www.cnblogs.com/zero-white/p/8730082.htmle
+	读写分离分库分表：
+		https://docs.djangoproject.com/en/2.0/topics/db/multi-db/#synchronizing-your-databases
+黑苹国：
+	https://osx.cx/retail.html
