@@ -86,3 +86,7 @@ django性能优化：
 		https://docs.djangoproject.com/en/2.0/topics/db/multi-db/#synchronizing-your-databases
 黑苹国：
 	https://osx.cx/retail.html
+django 单元测试
+	https://www.cnblogs.com/Water-T/p/11046836.html
+xposed:
+	https://repo.xposed.info/module/com.sky.xposed.rimet
