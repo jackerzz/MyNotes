@@ -1,5 +1,5 @@
 003:
-	将项目源码托管到oschina中
+	#将项目源码托管到oschina中
 
 	1. 点击头像 -> 修改资料 -> SSH公钥 [如何生成SSH公钥](http://git.mydoc.io/?t=154712)
 
