@@ -62,7 +62,7 @@ from sileo.fields import ResourceModel
 class UserResource(Resource):
     query_set=User.objects.all()
     fields = ['pk','username']
-哈哈哈
+
 class FooResource(Resource):
     query_set=Foo.objects.all()
     # ResourceModel()用于解析返回模型实例的字段/属性
