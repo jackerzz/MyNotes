@@ -89,4 +89,6 @@ django性能优化：
 django 单元测试
 	https://www.cnblogs.com/Water-T/p/11046836.html
 xposed:
-	https://repo.xposed.info/module/com.sky.xposed.rimet
+	https://repo.xposed.info/module/com.sky.xposed.rimet	
+django 模型字段
+	https://blog.csdn.net/devil_2009/article/details/41735611

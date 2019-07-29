@@ -40,3 +40,5 @@ git--help:
 	https://www.cnblogs.com/haiyan123/p/7994318.html
 	https://github.com/dunwu/blog/blob/master/source/_posts/tools/git.md
 	https://github.com/dunwu/blog
+# 放弃工作目录下的所有修改
+$ git reset --hard HEAD
