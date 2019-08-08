@@ -753,3 +753,11 @@ remote:   https://forge.channelfix.com/channelfix/channelfix/merge_requests/2846
 remote: 
 To forge.channelfix.com:channelfix/channelfix.git
    d0cb513557..e5ed0c939b  927-enhacement/influencer-page-display -> 927-enhacement/influencer-page-display
+
+
+
+.tournament.challenge-battling .arrow-icon {
+    @media all and (max-width: $mobile-cut-off) {
+         display: none;
+    }
+}

@@ -1,0 +1,56 @@
+# 查询相关API
+    # 1、all()：查看所有
+    student_obj = models.Student.objects.all()
+    print(student_obj)  #打印的结果是QuerySet集合
+    # 2、filter()：可以实现且关系，但是或关系需要借助Q查询实现。。。
+    #              查不到的时候不会报错
+    print(models.Student.objects.filter(name="Frank"))  #查看名字是Frank的
+    print(models.Student.objects.filter(name="Frank",fenshu=80))  #查看名字是Frank的并且分数是80的
+    # 3、get()：如果找不到就会报错，如果有多个值，也会报错，只能拿有一个值的
+    print(models.Student.objects.get(name="Frank"))  #拿到的是model对象
+    print(models.Student.objects.get(nid=2))  #拿到的是model对象
+    # 4、exclude()：排除条件
+    print( models.Student.objects.exclude(name="海东")) #查看除了名字是海东的信息
+    # 5、values()：是QuerySet的一个方法 （吧对象转换成字典的形式了，）
+    print(models.Student.objects.filter(name="海东").values("nid","course")) #查看名字为海东的编号和课程
+    #打印结果：<QuerySet [{'nid': 2, 'course': 'python'}, {'nid': 24, 'course': 'python'}]>
+    # 6、values_list()：是queryset的一个方法 （吧对象转成元组的形式了）
+    print(models.Student.objects.filter(name="海东").values_list("nid", "course"))
+    #打印结果：< QuerySet[(2, 'python'), (24, 'python')] >
+    # 7、order_by()：排序
+    print(models.Student.objects.all().order_by("fenshu"))
+    # 8、reverse()：倒序
+    print(models.Student.objects.all().reverse())
+    # 9、distinct()：去重（只要结果里面有重复的）
+    print(models.Student.objects.filter(course="python").values("fenshu").distinct())
+    # 10、count():查看有几条记录
+    print(models.Student.objects.filter(name="海东").count())
+
+    # 11、first()
+    # 12、last()
+    return render(request,"test.html",{"student_obj":student_obj})
+    # 13、esits：查看有没有记录，如果有返回True,没有返回False
+        #         并不需要判断所有的数据，
+        # if models.Book.objects.all().exists():
+
+
+#双下划线单表查询
+    models.Tb1.objects.filter(id__lt=10, id__gt=1)   # 获取id小于1 且 大于10的值
+     
+    models.Tb1.objects.filter(id__in=[11, 22, 33])   # 获取id等于11、22、33的数据
+    models.Tb1.objects.exclude(id__in=[11, 22, 33])  # not in
+     
+    models.Tb1.objects.filter(name__contains="ven")  #包括ven的
+    models.Tb1.objects.filter(name__icontains="ven") # icontains大小写不敏感
+     
+    models.Tb1.objects.filter(id__range=[1, 2])      # 范围bettwen and
+     
+    startswith，istartswith, endswith, iendswith
+#聚合 && 分组 查询
+    aggregate(*args,**kewargs)  只对一个组进行聚合 
+    annotate() 为QuerySet中每一个对象都生成一个独立的汇总值。是对分组完之后的结果进行的聚合
+#F && Q 查询
+    解一：
+        F--->
+            
+        Q--->

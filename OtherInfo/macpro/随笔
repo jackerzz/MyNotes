@@ -27,7 +27,7 @@ WIP   Work In Progress 开发中
 LGTM Looks Good To Me Riview 完别人的 PR ，没有问题
 PTAL Please Take A Look 帮我看下，一般都是请别人 review 自己的 PR
 CC 是好像是通知别人的意思，不知道是什么的缩写
-#---------------------------------------------------------------------------------
+#-------------------------------------------------------	--------------------------
 url——>视图 列表
 ./bin/manage listurls
 
@@ -81,7 +81,7 @@ ubuntu 安装pip的问题
 
 django性能优化：
 	https://www.cnblogs.com/zero-white/p/8733590.html
-	https://www.cnblogs.com/zero-white/p/8730082.htmle
+	https://www.cnblogs.com/zero-white/p/8730082.html
 	读写分离分库分表：
 		https://docs.djangoproject.com/en/2.0/topics/db/multi-db/#synchronizing-your-databases
 黑苹国：
@@ -92,3 +92,24 @@ xposed:
 	https://repo.xposed.info/module/com.sky.xposed.rimet	
 django 模型字段
 	https://blog.csdn.net/devil_2009/article/details/41735611
+postgres:
+	启动：sudo -u postgres psql
+	创建超级用户： CREATE ROLE jackerzhou superuser PASSWORD 'jackerzhou' login;
+	sessionid=njk9ucopwayo4ncl2p629sme6uuz75wl; path=/; domain=127.0.0.1;
+	jtnamkh5ag7g7s9asxjnlwcobmoz01f3
+db刷新：
+	self.entry1.refresh_from_db()
+kafka:
+	https://www.cnblogs.com/likehua/p/3999538.html
+
+celery 
+	https://www.cnblogs.com/ctztake/p/8964939.html
+
+rabbitMQ
+	https://www.cnblogs.com/ctztake/p/8512563.html
+
+redis
+	https://www.cnblogs.com/ctztake/p/10300817.html
+Faker造假
+	https://cuiqingcai.com/7080.html
+	https://faker.readthedocs.io/en/master/

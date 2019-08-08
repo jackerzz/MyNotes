@@ -2,7 +2,7 @@ vscode:
 	拉取主分支：git pull origin develop  		注:提交后注意看是否与主库冲突
 	切换分支：git checkout 分支name
 	删除本地分支：git branch -d 分支name
-	创建分支src/channelfix: git  branch 927-enhacement/influencer-page-display
+	创建分支src/channelfix: git  branch 927-enhacement/influencer-page-display  注： 需要基于最新的分支进行开发后在提交
 	编码
 	提交：git add .
 		 git commit -m 'Fix infuluencer page in review url'
