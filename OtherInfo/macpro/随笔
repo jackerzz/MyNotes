@@ -95,8 +95,7 @@ django 模型字段
 postgres:
 	启动：sudo -u postgres psql
 	创建超级用户： CREATE ROLE jackerzhou superuser PASSWORD 'jackerzhou' login;
-	sessionid=njk9ucopwayo4ncl2p629sme6uuz75wl; path=/; domain=127.0.0.1;
-	jtnamkh5ag7g7s9asxjnlwcobmoz01f3
+	
 db刷新：
 	self.entry1.refresh_from_db()
 kafka:
@@ -113,3 +112,9 @@ redis
 Faker造假
 	https://cuiqingcai.com/7080.html
 	https://faker.readthedocs.io/en/master/
+django models
+	https://docs.djangoproject.com/en/dev/ref/models/querysets/#order-by
+	order-by
+	Prefetch()
+ubuntu golang
+	https://studygolang.com/articles/13957?fr=sidebar

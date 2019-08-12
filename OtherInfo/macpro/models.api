@@ -54,3 +54,14 @@
         F--->
             
         Q--->
+
+# https://www.cnblogs.com/ctztake/p/7888848.html
+#exists() 与 iterator()
+exists()
+    检查是否有数据
+iterator()
+    当queryset非常巨大时，cache会成为问题
+    iterator()方法 来获取数据，处理完数据就将其丢弃。(使用iterator()方法来防止生成cache,意味着遍历同一个queryset时会重复执行查询)
+#优化
+    select_related主要针一对一和多对一关系进行。
+    prefetch_related()多对多字段（ManyToManyField）和一对多字段 
