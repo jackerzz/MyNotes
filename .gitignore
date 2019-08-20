@@ -13,3 +13,5 @@ ossutil_output/
 .idea/
 .vscode/
 Notes/OtherInfo/Api集合.py
+bin
+pkg

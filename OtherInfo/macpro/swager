@@ -1,0 +1,12 @@
+"""
+        resource:
+        fields:
+        filter_fields:
+        required_filter_fields:
+        allowed_methods:
+            get_pk: [get 1 tournament info]
+        form_fields:
+            注：当field 存在 from中有的fields时可以忽略在此处
+                kwargs不存在的不写
+
+    """
