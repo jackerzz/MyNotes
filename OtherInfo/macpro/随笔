@@ -8,7 +8,7 @@
  修改配置：
 	 sudo vi /etc/postgresql/10/main/postgresql.conf 
 	 sudo vi /etc/postgresql/10/main/pg_hba.conf 
- 
+ sudo python -m http.server 8888
  
 
 启动服务端：

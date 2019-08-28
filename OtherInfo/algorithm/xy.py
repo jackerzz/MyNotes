@@ -25,18 +25,20 @@ def join(png1, png2, flag='horizontal'):
         joint.paste(img2, loc2)
         joint.save('vertical.png')
 
-def resize_and_crop_video_thumbnail(img_thumbnail, width, height):
+def resize_and_crop(img_thumbnail, width, height):
     w, h = img_thumbnail.size
     if float(w)/float(h) > width/height:
         img_thumbnail = img_thumbnail.resize(
             (int(float(height/float(h))*float(w)), height), Image.ANTIALIAS)
         w, h = img_thumbnail.size
+      
         img_thumbnail = img_thumbnail.crop((w/2-width/2, 0, w/2+width/2,
                                                 height))
     else:
         img_thumbnail = img_thumbnail.resize(
             (width, int(float(width/float(w))*float(h))), Image.ANTIALIAS)
         w, h = img_thumbnail.size
+        print("size:",img_thumbnail.size)
         img_thumbnail = img_thumbnail.crop((0, h/2-height/2, width,
                                                 h/2+height/2))
     return img_thumbnail
@@ -46,10 +48,8 @@ def iamge_transpose(image1,image2):
     x,_ = NEW.size
     xLeft = x // 2
     boxLeftNew,boxRightNew  = (0, 0),(xLeft, 0)
-    image1 = resize_and_crop_video_thumbnail(image1,700,300)
-    image2 = resize_and_crop_video_thumbnail(image2,275,300)
-    image1.show()
-    image2.show()
+    image1 = resize_and_crop(image1,375,600)
+    image2 = resize_and_crop(image2,375,600)
     print(image1.size,image2.size)
     NEW.paste(image1, boxLeftNew)
     NEW.paste(image2, boxRightNew)
@@ -58,16 +58,20 @@ def iamge_transpose(image1,image2):
 
 def run(png1,png2):
     img1, img2 = Image.open(png1), Image.open(png2)
-    print(img2.size)
     avatar = iamge_transpose(img1,img2)
+    img1.show()
+    img2.show()
+    print("img",avatar.size)
+    avatar.show()
     avatar.save("new.png")
+    
 
 
 
 
 if __name__ == '__main__':
-    png1 = 'ss.jpg'
-    png2 = '13572.jpg'
+    png1 = 'https://cdn.vidsai.com/video/thumbs/eoFW6pjgWKnMYXEhvNwafV-360_0002.jpg'
+    png2 = 'https://cdn.vidsai.com/video/thumbs/eoFW6pjgWKnMYXEhvNwafV-360_0002.jpg'
     # imageFName = '13572.jpg'
     run(png1,png2)
     
